@@ -1,0 +1,111 @@
+/* Corpo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #121212; /* Fundo escuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho principal */
+h1 {
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000; /* Efeito de sombra no texto */
+    font-size: 3rem;
+}
+
+/* Subtítulos */
+h3 {
+    font-weight: bold;
+    color: #e68507;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #4879c9;
+}
+
+/* Estilo dos cartões */
+.card {
+    background-color: #212529;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra para destacar o cartão */
+    border: none;
+}
+
+/* Itens da lista */
+.list-group-item {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+    background-color: #495057;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #4879c9;
+    border: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #f08307;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(150, 204, 3, 0.4);
+}
+
+.btn-secondary {
+    font-size: 1.1rem;
+    background-color: #5a5a5a;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #707070;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(90, 90, 90, 0.4);
+}
+
+/* Ajuste dos inputs */
+input.form-control, select.form-select {
+    background-color: #2a2a2a;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input.form-control:focus, select.form-select:focus {
+    outline: none;
+    box-shadow: 0 0 8px #4879c9;
+    border-color: #4879c9;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #4879c9;
+}
