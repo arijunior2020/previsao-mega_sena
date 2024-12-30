@@ -48,6 +48,9 @@ probabilidades = {
     20: {"Sena": 1292, "Quina": 81, "Quadra": 13},
 }
 
+# Números sorteados
+numeros_sorteados = [5, 33, 4, 53, 7, 23]
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -93,6 +96,31 @@ def gerar():
 @app.route('/healthz')
 def healthz():
     return 'OK', 200
+
+# Verificar acertos
+@app.route('/conferir', methods=['POST'])
+def conferir():
+    numeros_jogados = request.form['numeros_jogados']
+
+    # Validar os números jogados
+    try:
+        numeros_jogados = list(map(int, numeros_jogados.split(',')))
+    except ValueError:
+        mensagem = "Por favor, insira números jogados válidos separados por vírgulas."
+        return render_template('index.html', mensagem=mensagem)
+
+    # Verificar acertos
+    acertos = set(numeros_jogados).intersection(numeros_sorteados)
+    
+    mensagem = "Parabéns!" if len(acertos) >= 4 else "Tente novamente!"
+    return render_template(
+        'conferir_resultados.html',
+        numeros_jogados=numeros_jogados,
+        numeros_sorteados=numeros_sorteados,
+        acertos=list(acertos),
+        quantidade_acertos=len(acertos),
+        mensagem=mensagem
+    )
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
