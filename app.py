@@ -49,7 +49,7 @@ probabilidades = {
 }
 
 # Números sorteados
-numeros_sorteados = [5, 33, 4, 53, 7, 23]
+numeros_sorteados = [50, 17, 29, 57, 1, 19]
 
 @app.route('/')
 def index():
